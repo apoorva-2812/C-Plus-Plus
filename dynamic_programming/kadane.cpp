@@ -1,5 +1,6 @@
 #include<iostream>
 #include<climits>
+using namespace std;
 
 int maxSubArraySum(int a[], int size) {
     int max_so_far = INT_MIN, max_ending_here = 0;
@@ -18,13 +19,13 @@ int maxSubArraySum(int a[], int size) {
 
 int main() {
     int n, i;
-    std::cout << "Enter the number of elements \n";
-    std::cin >> n;
+    cout << "Enter the number of elements \n";
+    cin >> n;
     int a[n];  // NOLINT
     for (i = 0; i < n; i++) {
-        std::cin >> a[i];
+        cin >> a[i];
     }
     int max_sum = maxSubArraySum(a, n);
-    std::cout << "Maximum contiguous sum is " << max_sum;
+    cout << "Maximum contiguous sum is " << max_sum;
     return 0;
 }
