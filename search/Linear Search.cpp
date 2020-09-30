@@ -1,17 +1,17 @@
 #include <iostream>
 using namespace std;
 
-int LinearSearch(int *array, int size, int key)
+void LinearSearch(int *array, int size, int key)
 {
 	for (int i = 0; i < size; ++i)
 	{
 		if (array[i] == key)
 		{
-			return i;
+			cout<<"Element found at index:"<<i;
 		}
 	}
 
-	return -1;
+	cout<<"Element not found!";
 }
 
 int main()
@@ -33,15 +33,5 @@ int main()
 	cout << "\nEnter the number to be searched : ";
 	cin >> key;
 
-	int index = LinearSearch(array, size, key);
-	if (index != -1)
-	{
-		cout << "\nNumber found at index : " << index;
-	}
-	else
-	{
-		cout << "\nNot found";
-	}
-
-	return 0;
+	LinearSearch(array, size, key);
 }
