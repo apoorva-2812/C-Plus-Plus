@@ -1,9 +1,7 @@
 //Bubble Sort
-
 #include <iostream>
 #include <vector>
 using namespace std;
-
 int main()
 {
 	int n;
@@ -39,14 +37,7 @@ int main()
 	cout << "\nSorted Array : ";
 	for (int i = 0; i < numbers.size(); i++)
 	{
-		if (i != numbers.size() - 1)
-		{
-			cout << numbers[i] << ", ";
-		}
-		else
-		{
-			cout << numbers[i] << endl;
-		}
+			cout << numbers[i]<<' ';
 	}
 	return 0;
 }
