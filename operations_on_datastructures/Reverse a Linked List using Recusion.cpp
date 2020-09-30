@@ -7,11 +7,11 @@ struct node
 	node *next;
 };
 
-node *start;
+node *head;
 
 void insert(int x)
 {
-	node *t = start;
+	node *t = head;
 	if (start != NULL)
 	{
 		while (t->next != NULL)
@@ -28,7 +28,7 @@ void insert(int x)
 		node *n = new node;
 		n->val = x;
 		n->next = NULL;
-		start = n;
+		head = n;
 	}
 }
 
@@ -68,7 +68,7 @@ int main()
 	insert(5);
 	insert(6);
 
-	reverse(start, start->next);
+	reverse(head, head->next);
 
 	show();
 
